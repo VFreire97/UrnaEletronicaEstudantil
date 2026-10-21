@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no"
+    >
+
+    <title>Urna - Grêmio Estudantil</title>
+
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="css/urna.css">
+</head>
+
+<body class="pagina-urna">
+
+<div class="urna">
+
+    <!-- ÁREA SUPERIOR -->
+
+    <section class="painel-superior">
+
+        <div class="monitor">
+
+            <div id="tela" class="tela">
+
+                <header class="cabecalho-tela">
+                    <strong>ELEIÇÃO DO GRÊMIO ESTUDANTIL</strong>
+                    <span>VOTAÇÃO ESCOLAR</span>
+                </header>
+
+                <!-- BLOQUEADA -->
+
+                <div id="telaBloqueada" class="estado-tela tela-bloqueada">
+
+                    <div class="icone-bloqueio">●</div>
+
+                    <h1>AGUARDE</h1>
+
+                    <p>
+                        Aguardando liberação pelo mesário
+                    </p>
+
+                </div>
+
+                <!-- VOTAÇÃO -->
+
+                <div id="telaVotacao" class="estado-tela oculto">
+
+                    <div class="coluna-voto">
+
+                        <span class="rotulo">
+                            SEU VOTO PARA
+                        </span>
+
+                        <h1>CHAPA</h1>
+
+                        <div id="numeroDigitado" class="numero-digitado">
+
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <div id="dadosChapa" class="dados-chapa oculto">
+
+                            <p class="rotulo-menor">CHAPA</p>
+
+                            <h2 id="nomeChapa"></h2>
+
+                        </div>
+
+                        <div id="mensagemBranco" class="mensagem-branco oculto">
+                            VOTO EM BRANCO
+                        </div>
+
+                        <p id="instrucao" class="instrucao">
+                            Digite o número da chapa
+                        </p>
+
+                    </div>
+
+                    <div class="coluna-imagem">
+
+                        <div id="logoContainer" class="logo-chapa">
+                            GRÊMIO<br>
+                            ESTUDANTIL
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- FIM -->
+
+                <div id="telaFim" class="estado-tela tela-fim oculto">
+
+                    <h1>FIM</h1>
+
+                    <p>Voto registrado</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PARTE INFERIOR -->
+
+    <section class="painel-inferior">
+
+        <div class="marca-escolar">
+
+            <div class="simbolo-escola">
+                GE
+            </div>
+
+            <div>
+                <strong>ELEIÇÃO</strong>
+                <span>GRÊMIO ESTUDANTIL</span>
+            </div>
+
+        </div>
+
+
+        <!-- TECLADO -->
+
+        <div class="teclado">
+
+            <button class="tecla numerica" data-numero="1">1</button>
+            <button class="tecla numerica" data-numero="2">2</button>
+            <button class="tecla numerica" data-numero="3">3</button>
+
+            <button class="tecla numerica" data-numero="4">4</button>
+            <button class="tecla numerica" data-numero="5">5</button>
+            <button class="tecla numerica" data-numero="6">6</button>
+
+            <button class="tecla numerica" data-numero="7">7</button>
+            <button class="tecla numerica" data-numero="8">8</button>
+            <button class="tecla numerica" data-numero="9">9</button>
+
+            <div></div>
+
+            <button class="tecla numerica" data-numero="0">0</button>
+
+        </div>
+
+
+        <!-- AÇÕES -->
+
+        <div class="acoes">
+
+            <button id="btnBranco" class="tecla-acao branco">
+                BRANCO
+            </button>
+
+            <button id="btnCorrige" class="tecla-acao corrige">
+                CORRIGE
+            </button>
+
+            <button id="btnConfirma" class="tecla-acao confirma">
+                CONFIRMA
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="js/database.js"></script>
+<script src="js/urna.js"></script>
+
+</body>
+</html>

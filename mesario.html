@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Terminal do Mesário</title>
+
+    <link rel="stylesheet" href="css/geral.css">
+
+</head>
+
+<body>
+
+<main class="painel">
+
+    <header>
+        <h1>Terminal do Mesário</h1>
+
+        <p>
+            Eleição do Grêmio Estudantil
+        </p>
+    </header>
+
+
+    <section class="card">
+
+        <label for="ra">
+            RA do eleitor
+        </label>
+
+        <input
+            id="ra"
+            type="text"
+            inputmode="numeric"
+            autocomplete="off"
+            placeholder="Digite o RA"
+        >
+
+        <button
+            id="consultar"
+            class="botao-principal"
+        >
+            CONSULTAR
+        </button>
+
+    </section>
+
+
+    <section
+        id="resultadoEleitor"
+        class="card oculto"
+    >
+
+        <span class="legenda">
+            ELEITOR
+        </span>
+
+        <h2 id="nomeEleitor"></h2>
+
+        <p>
+            RA:
+            <strong id="raEleitor"></strong>
+        </p>
+
+        <p id="situacaoEleitor"></p>
+
+        <button
+            id="liberar"
+            class="botao-confirmar"
+        >
+            LIBERAR VOTAÇÃO
+        </button>
+
+    </section>
+
+</main>
+
+<script src="js/database.js"></script>
+<script src="js/mesario.js"></script>
+
+</body>
+</html>

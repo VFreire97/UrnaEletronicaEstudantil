@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    background:
+        linear-gradient(135deg, #e9eef2, #cbd4da);
+
+    color: #16202a;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+.painel {
+    width: min(850px, 94%);
+
+    margin: 40px auto;
+}
+
+header {
+    margin-bottom: 25px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+
+    font-size: 34px;
+}
+
+header p {
+    color: #64717b;
+}
+
+.card {
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 6px 22px rgba(0,0,0,.10);
+}
+
+.card label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.card input[type="text"] {
+    width: 100%;
+
+    padding: 16px;
+
+    font-size: 22px;
+
+    border:
+        2px solid #b6c0c7;
+
+    border-radius: 8px;
+
+    margin-bottom: 15px;
+}
+
+.botao-principal,
+.botao-secundario,
+.botao-confirmar {
+    display: inline-block;
+
+    padding: 15px 22px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.botao-principal {
+    background: #164f80;
+    color: white;
+}
+
+.botao-secundario {
+    background: #4f5d68;
+    color: white;
+}
+
+.botao-confirmar {
+    background: #2e9f4c;
+    color: white;
+}
+
+.status-ok {
+    color: #17893b;
+
+    font-size: 19px;
+
+    font-weight: bold;
+}
+
+.status-erro {
+    color: #bf2929;
+
+    font-size: 19px;
+
+    font-weight: bold;
+}
+
+.oculto {
+    display: none !important;
+}
+
+.linha-chapa {
+    padding: 12px;
+
+    border-bottom:
+        1px solid #ddd;
+}
+
+.pagina-inicial {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.inicio-card {
+    width: min(650px, 92%);
+
+    padding: 50px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.18);
+}
+
+.inicio-card h1 {
+    font-size: 38px;
+}
+
+.subtitulo {
+    margin-bottom: 35px;
+
+    color: #64717b;
+}
+
+.inicio-botoes {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.aviso {
+    font-size: 13px;
+
+    color: #89939a;
+
+    margin-top: 35px;
+}

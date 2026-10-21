@@ -1,0 +1,457 @@
+* {
+    box-sizing: border-box;
+}
+
+body.pagina-urna {
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at center, #dadada, #8b8b8b);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow: hidden;
+    touch-action: manipulation;
+}
+
+.urna {
+    width: min(1180px, 98vw);
+
+    background: linear-gradient(
+        145deg,
+        #f7f7f3,
+        #d9d9d4
+    );
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.38),
+        inset 2px 2px 3px rgba(255,255,255,.9),
+        inset -3px -3px 5px rgba(0,0,0,.14);
+
+    border: 1px solid #aaa;
+
+    overflow: hidden;
+}
+
+/* MONITOR */
+
+.painel-superior {
+    padding: 26px 34px 20px;
+}
+
+.monitor {
+    background: #171717;
+
+    padding: 17px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        inset 0 0 10px #000,
+        0 3px 7px rgba(0,0,0,.4);
+}
+
+.tela {
+    position: relative;
+
+    height: 515px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #ffffff,
+            #edf6f7
+        );
+
+    color: #111;
+
+    overflow: hidden;
+
+    box-shadow:
+        inset 0 0 8px rgba(0,0,0,.35);
+}
+
+.cabecalho-tela {
+    height: 66px;
+
+    background: #e2eef5;
+
+    border-bottom: 2px solid #adc0cc;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 35px;
+
+    font-size: 18px;
+}
+
+.cabecalho-tela strong {
+    font-size: 22px;
+}
+
+/* ESTADOS */
+
+.estado-tela {
+    height: calc(100% - 66px);
+}
+
+.tela-bloqueada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tela-bloqueada h1 {
+    font-size: 62px;
+    margin: 4px;
+}
+
+.tela-bloqueada p {
+    font-size: 22px;
+}
+
+.icone-bloqueio {
+    color: #d69000;
+
+    font-size: 45px;
+
+    animation: pulsar 1.3s infinite;
+}
+
+@keyframes pulsar {
+    50% {
+        opacity: .35;
+    }
+}
+
+/* VOTAÇÃO */
+
+#telaVotacao {
+    grid-template-columns: 65% 35%;
+    padding: 45px 55px;
+}
+
+#telaVotacao:not(.oculto) {
+    display: grid;
+}
+
+.rotulo {
+    font-size: 25px;
+}
+
+.coluna-voto h1 {
+    margin: 5px 0 25px;
+
+    font-size: 55px;
+}
+
+.numero-digitado {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.numero-digitado span {
+    width: 74px;
+    height: 92px;
+
+    border: 3px solid #333;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 62px;
+    font-weight: bold;
+}
+
+.dados-chapa h2 {
+    font-size: 34px;
+
+    margin-top: 5px;
+}
+
+.rotulo-menor {
+    margin-bottom: 0;
+
+    font-size: 16px;
+}
+
+.instrucao {
+    margin-top: 30px;
+
+    font-size: 20px;
+}
+
+.mensagem-branco {
+    font-size: 35px;
+
+    font-weight: bold;
+
+    padding: 25px 0;
+}
+
+.logo-chapa {
+    height: 270px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(145deg, #f2f7fa, #d9e7ed);
+
+    border: 1px solid #aaa;
+
+    color: #184878;
+
+    font-size: 35px;
+    font-weight: 800;
+
+    text-align: center;
+}
+
+/* FIM */
+
+.tela-fim {
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+.tela-fim:not(.oculto) {
+    display: flex;
+}
+
+.tela-fim h1 {
+    font-size: 110px;
+
+    margin: 0;
+}
+
+.tela-fim p {
+    font-size: 22px;
+}
+
+/* PAINEL INFERIOR */
+
+.painel-inferior {
+    min-height: 350px;
+
+    padding: 20px 45px 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(200px, 1fr)
+        360px
+        190px;
+
+    gap: 34px;
+
+    align-items: center;
+
+    border-top: 1px solid #bababa;
+
+    background:
+        linear-gradient(
+            130deg,
+            #eeeeeb,
+            #d3d3cf
+        );
+}
+
+/* MARCA */
+
+.marca-escolar {
+    color: #777;
+
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+}
+
+.marca-escolar strong,
+.marca-escolar span {
+    display: block;
+}
+
+.simbolo-escola {
+    width: 85px;
+    height: 85px;
+
+    border: 3px solid #aaa;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+    font-weight: bold;
+
+    color: #999;
+}
+
+/* TECLADO */
+
+.teclado {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 94px);
+
+    gap: 15px;
+
+    justify-content: center;
+}
+
+.tecla {
+    height: 75px;
+
+    border-radius: 10px;
+
+    border:
+        2px solid #090909;
+
+    background:
+        linear-gradient(
+            145deg,
+            #353535,
+            #111
+        );
+
+    color: white;
+
+    font-size: 38px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 0 #000,
+        0 10px 13px rgba(0,0,0,.4),
+        inset 2px 2px 2px rgba(255,255,255,.2);
+
+    user-select: none;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+.tecla:active {
+    transform: translateY(6px);
+
+    box-shadow:
+        0 1px 0 #000;
+}
+
+/* BOTÕES LATERAIS */
+
+.acoes {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.tecla-acao {
+    width: 175px;
+    height: 78px;
+
+    border-radius: 9px;
+
+    border: 2px solid #333;
+
+    font-weight: 800;
+    font-size: 19px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 0 rgba(0,0,0,.55),
+        0 10px 12px rgba(0,0,0,.25);
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+.tecla-acao:active {
+    transform: translateY(6px);
+
+    box-shadow:
+        0 1px 0 rgba(0,0,0,.5);
+}
+
+.branco {
+    background:
+        linear-gradient(#fff, #ddd);
+
+    color: #111;
+}
+
+.corrige {
+    background:
+        linear-gradient(#fca334, #ef7810);
+
+    color: #111;
+}
+
+.confirma {
+    height: 100px;
+
+    background:
+        linear-gradient(#56cc65, #32a94d);
+
+    color: #111;
+}
+
+.oculto {
+    display: none !important;
+}
+
+/* TABLET */
+
+@media (max-width: 850px) {
+
+    body.pagina-urna {
+        overflow: auto;
+    }
+
+    .painel-inferior {
+        grid-template-columns: 1fr 160px;
+    }
+
+    .marca-escolar {
+        display: none;
+    }
+
+    .tela {
+        height: 430px;
+    }
+
+    .teclado {
+        grid-template-columns:
+            repeat(3, minmax(70px, 95px));
+    }
+
+    .tecla-acao {
+        width: 150px;
+    }
+}

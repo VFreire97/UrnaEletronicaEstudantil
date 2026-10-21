@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Administração da Eleição</title>
+
+    css/geral.css
+
+</head>
+
+<body>
+
+<main class="painel">
+
+    <header>
+
+        <h1>Administração</h1>
+
+        <p>
+            Eleição do Grêmio Estudantil
+        </p>
+
+    </header>
+
+
+    <section class="card">
+
+        <h2>Eleitores</h2>
+
+        <p>
+            Importe um arquivo XML contendo
+            nome e RA dos estudantes.
+        </p>
+
+        <input
+            type="file"
+            id="arquivoXML"
+            accept=".xml,text/xml"
+        >
+
+        <button
+            id="importarXML"
+            class="botao-principal"
+        >
+            IMPORTAR ELEITORES
+        </button>
+
+        <div id="resultadoImportacao"></div>
+
+    </section>
+
+
+    <section class="card">
+
+        <h2>Chapas cadastradas</h2>
+
+        <div id="listaChapas"></div>
+
+    </section>
+
+
+    <section class="card">
+
+        <h2>Votação</h2>
+
+        <p>
+            <strong>Total de votos:</strong>
+            <span id="totalVotos">0</span>
+        </p>
+
+        <button
+            id="apuracao"
+            class="botao-secundario"
+        >
+            MOSTRAR APURAÇÃO
+        </button>
+
+        <div
+            id="resultadoApuracao"
+            class="apuracao"
+        ></div>
+
+    </section>
+
+</main>
+
+js/database.jsscript>
+js/admin.jsscript>
+
+</body>
+</html>
